@@ -7,254 +7,158 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
-        body { 
-            font-family: 'Inter', system-ui, sans-serif; 
-        }
-
-        .red-gradient {
-            background: linear-gradient(135deg, #CE1126, #A50F1F);
-        }
-
-        .hero-gradient {
-            background: linear-gradient(135deg, #121212 0%, #1A1A1A 50%, #2C2C2C 100%);
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.9s ease forwards;
-        }
-
-        .logo-float {
-            animation: float 3.5s ease-in-out infinite;
-        }
-
-        .cta-button {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 20px 25px -5px rgb(206 17 38 / 0.4);
-        }
-
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            border-color: #CE1126;
-            box-shadow: 0 25px 50px -12px rgb(206 17 38 / 0.25);
-        }
+        body { font-family: 'Inter', system-ui, sans-serif; }
     </style>
 </head>
-<body class="bg-[#121212] text-white overflow-x-hidden">
+<body class="bg-[#0A0A0A] text-white">
     <!-- Navbar -->
-    <nav class="bg-[#121212]/95 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
+    <nav class="bg-[#0A0A0A] border-b border-gray-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img src="logo.png" alt="Stagg Haul Co. Logo" class="h-12 w-12 logo-float">
-                <div class="flex items-baseline">
+                <img src="logo.png" alt="Stagg Haul Co. Logo" class="h-10 w-10">
+                <div>
                     <span class="text-[#CE1126] font-bold text-2xl tracking-tighter">STAGG</span>
-                    <span class="font-bold text-2xl tracking-tighter ml-1">HAUL</span>
+                    <span class="font-bold text-2xl tracking-tighter">HAUL</span>
                 </div>
             </div>
+            
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#services" class="hover:text-[#CE1126] transition-colors">Services</a>
                 <a href="#about" class="hover:text-[#CE1126] transition-colors">About</a>
                 <a href="#contact" class="hover:text-[#CE1126] transition-colors">Contact</a>
             </div>
+            
             <a href="#contact" 
-               class="cta-button red-gradient text-white px-7 py-3 rounded-2xl text-sm font-semibold flex items-center gap-2">
+               class="bg-[#CE1126] hover:bg-red-700 transition-colors text-white px-6 py-3 rounded-2xl text-sm font-semibold">
                 GET FREE QUOTE
             </a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="hero-gradient min-h-screen flex items-center relative">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 bg-gray-900 text-[#CE1126] text-sm font-medium px-5 py-2 rounded-full">
-                    <span class="w-2 h-2 bg-[#CE1126] rounded-full animate-pulse"></span>
-                    TOOELE, UTAH • SALT LAKE VALLEY &amp; SURROUNDING AREAS
+    <!-- Hero Section -->
+    <header class="min-h-screen flex items-center bg-[#0A0A0A]">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="flex justify-center mb-8">
+                    <img src="logo.png" alt="Stagg Haul Co. Logo" class="w-40 md:w-56">
                 </div>
-
-                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter animate-fade-in-up">
+                
+                <h1 class="text-5xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
                     WE HAUL IT,<br>
                     <span class="text-[#CE1126]">YOU FORGET IT.</span>
                 </h1>
-
-                <p class="text-xl text-gray-400 max-w-lg animate-fade-in-up" style="animation-delay: 200ms;">
-                    Professional junk removal and hauling services based in Tooele, Utah. 
-                    Fast, reliable, and hassle-free.
+                
+                <p class="text-xl text-gray-400 max-w-xl mx-auto mb-10">
+                    Professional junk removal and hauling services in Tooele, Utah and the greater Salt Lake Valley.
                 </p>
-
-                <div class="flex flex-wrap gap-4 animate-fade-in-up" style="animation-delay: 400ms;">
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#contact" 
-                       class="cta-button red-gradient text-white px-8 py-4 rounded-2xl font-semibold text-lg inline-flex items-center gap-2">
+                       class="bg-[#CE1126] hover:bg-red-700 transition-colors text-white px-8 py-4 rounded-2xl font-semibold text-lg">
                         GET FREE QUOTE
                     </a>
                     <a href="tel:435-244-9057" 
-                       class="border border-white/60 hover:border-[#CE1126] hover:text-[#CE1126] transition-all px-8 py-4 rounded-2xl font-semibold text-lg">
-                        (435) 244-9057
+                       class="border border-white/70 hover:bg-white hover:text-black transition-colors px-8 py-4 rounded-2xl font-semibold text-lg">
+                        CALL (435) 244-9057
                     </a>
                 </div>
-
-                <div class="flex gap-6 text-sm text-gray-400 animate-fade-in-up" style="animation-delay: 600ms;">
-                    <div>✔ Same-day service</div>
-                    <div>✔ Fully insured</div>
-                    <div>✔ Eco-friendly</div>
-                </div>
-            </div>
-
-            <div class="flex justify-center pt-12 md:pt-0">
-                <img src="logo.png" alt="Stagg Haul Co. Logo" 
-                     class="w-80 md:w-[420px] drop-shadow-2xl logo-float">
             </div>
         </div>
     </header>
 
     <!-- Services -->
-    <section id="services" class="py-24 bg-[#1A1A1A]">
+    <section id="services" class="py-20 bg-[#111111]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold tracking-tight">Our Services</h2>
-                <p class="text-gray-400 mt-3">Reliable junk removal for residential and commercial needs</p>
+                <p class="text-gray-400 mt-3">Fast, reliable junk removal for homes and businesses</p>
             </div>
+            
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="service-card bg-[#121212] border border-gray-800 rounded-3xl p-9">
+                <div class="bg-[#0A0A0A] border border-gray-800 rounded-3xl p-8">
                     <h3 class="text-2xl font-semibold mb-4">Residential Junk Removal</h3>
-                    <p class="text-gray-400">Furniture, appliances, yard waste, garage &amp; basement cleanouts.</p>
+                    <p class="text-gray-400">Furniture, appliances, yard waste, garage cleanouts, and more.</p>
                 </div>
-                <div class="service-card bg-[#121212] border border-gray-800 rounded-3xl p-9">
+                <div class="bg-[#0A0A0A] border border-gray-800 rounded-3xl p-8">
                     <h3 class="text-2xl font-semibold mb-4">Commercial Hauling</h3>
-                    <p class="text-gray-400">Office cleanouts, retail disposal, and construction debris removal.</p>
+                    <p class="text-gray-400">Office cleanouts, retail disposal, construction debris removal.</p>
                 </div>
-                <div class="service-card bg-[#121212] border border-gray-800 rounded-3xl p-9">
+                <div class="bg-[#0A0A0A] border border-gray-800 rounded-3xl p-8">
                     <h3 class="text-2xl font-semibold mb-4">Dumpster Rental &amp; Full Service</h3>
-                    <p class="text-gray-400">Temporary roll-off dumpsters or complete haul-away solutions.</p>
+                    <p class="text-gray-400">Temporary dumpsters or complete haul-away solutions.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold tracking-tight mb-6">Why Choose Stagg Haul Co.?</h2>
-                    <p class="text-gray-400 leading-relaxed text-lg">
-                        Locally owned and operated in Tooele, Utah. We take pride in providing dependable, 
-                        respectful service across the Salt Lake Valley and surrounding areas.
-                    </p>
-                    <p class="mt-6 text-[#CE1126] font-medium text-xl">"We Haul It, You Forget It."</p>
-                    
-                    <ul class="mt-10 space-y-5 text-lg">
-                        <li class="flex gap-4"><span class="text-[#CE1126]">✔</span> Licensed &amp; Fully Insured</li>
-                        <li class="flex gap-4"><span class="text-[#CE1126]">✔</span> Same-day &amp; Next-day Service</li>
-                        <li class="flex gap-4"><span class="text-[#CE1126]">✔</span> Competitive Pricing</li>
-                        <li class="flex gap-4"><span class="text-[#CE1126]">✔</span> Eco-Friendly Disposal</li>
-                    </ul>
+    <section id="about" class="py-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold tracking-tight mb-6">Why Choose Stagg Haul Co.?</h2>
+            <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                Locally owned and operated in Tooele, Utah. We provide fast, reliable, and professional junk removal 
+                across the Salt Lake Valley and surrounding areas. Our promise is simple:
+            </p>
+            <p class="text-[#CE1126] text-2xl font-semibold mb-10">"We Haul It, You Forget It."</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+                <div class="flex gap-4">
+                    <span class="text-[#CE1126] text-2xl">✔</span>
+                    <div>Same-day and next-day service available</div>
                 </div>
-                <div class="bg-[#121212] border border-gray-800 rounded-3xl p-12 text-center">
-                    <img src="logo.png" alt="Stagg Haul Co. Logo" class="w-52 mx-auto mb-10 logo-float">
-                    <p class="italic text-gray-300">"Professional, punctual, and left our property spotless. Highly recommended!"</p>
-                    <p class="mt-6 text-sm text-gray-500">— Satisfied Customer in Tooele County</p>
+                <div class="flex gap-4">
+                    <span class="text-[#CE1126] text-2xl">✔</span>
+                    <div>Fully licensed and insured</div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-[#CE1126] text-2xl">✔</span>
+                    <div>Eco-friendly disposal practices</div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-[#CE1126] text-2xl">✔</span>
+                    <div>Competitive pricing with no hidden fees</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-24 bg-[#1A1A1A]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="text-4xl font-bold tracking-tight mb-6">Get Your Free Quote</h2>
-                    <p class="text-gray-400">Fill out the form below and we’ll get back to you quickly.</p>
-
-                    <!-- Form that sends email to stagghaul@gmail.com -->
-                    <form action="https://formsubmit.co/stagghaul@gmail.com" method="POST" class="mt-10 space-y-6">
-                        <div class="grid grid-cols-2 gap-6">
-                            <input type="text" name="first_name" placeholder="First Name" required
-                                   class="bg-[#121212] border border-gray-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#CE1126]">
-                            <input type="text" name="last_name" placeholder="Last Name" required
-                                   class="bg-[#121212] border border-gray-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#CE1126]">
-                        </div>
-                        <input type="tel" name="phone" placeholder="Phone Number" required
-                               class="w-full bg-[#121212] border border-gray-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#CE1126]">
-                        <textarea name="message" placeholder="Describe what you need hauled..." rows="5" required
-                                  class="w-full bg-[#121212] border border-gray-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-[#CE1126]"></textarea>
-                        
-                        <!-- Hidden fields for better email delivery -->
-                        <input type="hidden" name="_subject" value="New Quote Request - Stagg Haul Co.">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> <!-- Optional: replace with your thank-you page later -->
-                        
-                        <button type="submit"
-                                class="cta-button w-full red-gradient text-white py-5 rounded-2xl font-semibold text-lg">
-                            SUBMIT REQUEST
-                        </button>
-                    </form>
-                </div>
-
-                <div class="space-y-10">
-                    <div class="flex gap-5">
-                        <div class="bg-[#CE1126]/10 text-[#CE1126] w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">📍</div>
-                        <div>
-                            <p class="font-medium">Tooele, Utah</p>
-                            <p class="text-gray-400">Serving the Salt Lake Valley and surrounding areas</p>
-                        </div>
+    <section id="contact" class="py-20 bg-[#111111]">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold tracking-tight mb-6">Ready to Clear the Clutter?</h2>
+            <p class="text-gray-400 text-lg mb-10">Get a free, no-obligation quote today.</p>
+            
+            <div class="bg-[#0A0A0A] border border-gray-800 rounded-3xl p-10">
+                <div class="space-y-6 text-lg">
+                    <div>
+                        <span class="text-[#CE1126]">📞</span> 
+                        <a href="tel:435-244-9057" class="hover:text-[#CE1126]">(435) 244-9057</a>
                     </div>
-                    <div class="flex gap-5">
-                        <div class="bg-[#CE1126]/10 text-[#CE1126] w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">📞</div>
-                        <div>
-                            <a href="tel:435-244-9057" class="font-medium hover:text-[#CE1126]">(435) 244-9057</a>
-                            <p class="text-gray-400">Available 7 days a week</p>
-                        </div>
+                    <div>
+                        <span class="text-[#CE1126]">✉️</span> 
+                        <a href="mailto:stagghaul@gmail.com" class="hover:text-[#CE1126]">stagghaul@gmail.com</a>
                     </div>
-                    <div class="flex gap-5">
-                        <div class="bg-[#CE1126]/10 text-[#CE1126] w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">✉️</div>
-                        <div>
-                            <a href="mailto:stagghaul@gmail.com" class="font-medium hover:text-[#CE1126]">stagghaul@gmail.com</a>
-                            <p class="text-gray-400">We reply within 1 hour during business hours</p>
-                        </div>
+                    <div class="pt-4 border-t border-gray-800">
+                        <p class="text-sm text-gray-400">Serving Tooele, Utah and the greater Salt Lake Valley</p>
                     </div>
                 </div>
             </div>
+            
+            <p class="text-sm text-gray-400 mt-8">We usually reply within 1 hour during business hours.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-12 border-t border-gray-900">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex items-center justify-center gap-3 mb-6">
-                <img src="logo.png" alt="Stagg Haul Co. Logo" class="h-9 w-9">
-                <span class="text-[#CE1126] font-bold text-2xl tracking-tighter">STAGG</span>
-                <span class="font-bold text-2xl tracking-tighter">HAUL CO.</span>
+    <footer class="bg-black py-10">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <img src="logo.png" alt="Stagg Haul Co. Logo" class="h-8 w-8">
+                <span class="text-[#CE1126] font-bold">STAGG</span>
+                <span class="font-bold">HAUL CO.</span>
             </div>
-            <p class="text-xl font-medium text-white mb-2">We Haul It, You Forget It.</p>
-            <p class="text-gray-500 text-sm">
-                © 2026 Stagg Haul Co. All Rights Reserved.<br>
-                Junk Removal • Hauling • Tooele, Utah • Salt Lake Valley &amp; Surrounding Areas
-            </p>
+            <p>© 2026 Stagg Haul Co. All Rights Reserved.</p>
+            <p class="mt-1">Junk Removal • Hauling • Tooele, Utah</p>
         </div>
     </footer>
-
-    <script>
-        tailwind.config = { content: [] };
-    </script>
 </body>
 </html>
